@@ -82,7 +82,7 @@ Module for fetching and working with M3U8 manifest files.
 This is for individual manifests not multi-variant playlists (I may eventually create a module that builds on this)
 
 =head2 new
-	$m = M3U8->new($url_or_filename)
+	$m = Video::M3U8->new($url_or_filename)
 
 If the string contains 'http', new() will fetch the contains from the web, if it does not, new will read from the file
 and process the contents, the contents are read into a hash once. since its possible for playlists to be updated consistently,
