@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Video-M3U8.t
+lib/Video/M3U8.pm
