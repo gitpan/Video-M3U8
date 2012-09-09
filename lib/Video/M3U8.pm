@@ -1,8 +1,8 @@
-package M3U8;
+package Video::M3U8;
 use warnings;
 use strict;
 use WWW::Mechanize;
-my $VERSION = '0.00';
+my $VERSION = '0.0.2';
 my $cache = {
 	manifest => [], #array of manifest file
 	tags	 => [], #array of all tags
@@ -78,10 +78,14 @@ sub is_last_playlist {
 
 
 =head1 Overview
+
 Module for fetching and working with M3U8 manifest files.
 This is for individual manifests not multi-variant playlists (I may eventually create a module that builds on this)
 
+=cut
+
 =head2 new
+
 	$m = Video::M3U8->new($url_or_filename)
 
 If the string contains 'http', new() will fetch the contains from the web, if it does not, new will read from the file
@@ -89,30 +93,44 @@ and process the contents, the contents are read into a hash once. since its poss
 the only time it is fetched is on 'new()', all other functions work from cache, each new manifest or seeking updates should 
 be called again.
 
+=cut
+
 =head2 Get playlist
 
 Function will return the entire manifest/playlist
 
 	$m->get_playlist
 
+=cut
+
 =head2 Get tags
+
 If you would just like to use the tags;
 
 	$m->get_tags
 
+=cut
+
 =head2 Checking for the last playlist
+
 If its an Ondemand playlist or the last in a Live stream (contains EXT-X-ENDLIST tag) this sub will return '1' (true)
 
 	$m->is_last_playlist
 
+=cut
+
 =head2 Checking for target duration
+
 Function will return the target duration
 
 	$m->get_target_duration
 
+=cut
+
 =head1 AUTHORS
 
  Copyright (c) 2012
- cost: tell me about bugs or points to improve - have fun.
+ Cost: tell me about bugs or points to improve - have fun.
  Omar Salix, <osalix@gmail.com>
+
 =cut
