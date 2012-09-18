@@ -2,7 +2,7 @@ package Video::M3U8;
 use warnings;
 use strict;
 use WWW::Mechanize;
-my $VERSION = '0.0.2';
+my $VERSION = '0.0.3';
 my $cache = {
 	manifest => [], #array of manifest file
 	tags	 => [], #array of all tags

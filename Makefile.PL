@@ -5,8 +5,8 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME              => 'Video::M3U8',
     VERSION_FROM      => 'lib/Video/M3U8.pm', # finds $VERSION
-    PREREQ_PM         => {}, # e.g., Module::Name => 1.1
-    ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
-      (ABSTRACT_FROM  => 'lib/Video/M3U8.pm', # retrieve abstract from module
-       AUTHOR         => 'omar salix <omarsalix@local>') : ()),
-);
+    PREREQ_PM         => {
+			'WWW::Mechanize'	=> '0',
+		}, 
+    AUTHOR		=> 'MRSLX (cpanplus-info@lists.sf.net)', 
+	);
